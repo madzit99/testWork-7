@@ -15,7 +15,7 @@ const FOOD = [
   { name: "Sendfich", cost: 90, img: sendfichImage },
   { name: "Fries", cost: 60, img: friesImage },
   { name: "Borjomi", cost: 60, img: borjomiImage },
-  { name: "Coffee", cost: 30, img: coffeeImage },
+  { name: "Coffee", cost: 100, img: coffeeImage },
 ];
 
 export default FOOD;

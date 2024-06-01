@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Order } from './types';
 import FoodComponent from './Components/FoodComponent';
 import FOOD from './Constant';
+import OrderComponent from './Components/OrderComponent';
 
 
 const  App = () => {
@@ -28,6 +28,17 @@ const  App = () => {
   };
 
 
+  const findCost = (name: string, count: number): number => {
+    const foodInfo = FOOD.find((item) => item.name === name);
+    if (foodInfo) {
+      const cost = foodInfo?.cost * count;
+      return cost;
+    } else {
+      throw new Error("Ошибка!");
+    }
+  };
+
+
 
   return (
     <div className='container'>
@@ -35,10 +46,16 @@ const  App = () => {
         <div className="col mt-4">
            <h4 className="bg-white p-3 rounded-5">Ваш заказ</h4>
            <div className="orders bg-white p-3 rounded-5">
-            <span className='fs-3'>
+            {orders.length === 0 ? (
+              <span className='fs-3'>
               Заказ пуст! <br />
               Пожалуйста, добавьте несколько позиций!
             </span>
+              ) : (
+                orders.map((order) => (
+                  <OrderComponent name={order.name} count={order.count} func={() => findCost(order.name, order.count)} onDelete={deleteOrder} />
+                ))
+              )}
            </div>
         </div>
         <div className="col-8 mt-4">

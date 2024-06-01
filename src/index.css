@@ -1,3 +1,9 @@
 .card-pic {
   width: 50px;
 }
+
+body {
+  background: url(../src/assets/bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

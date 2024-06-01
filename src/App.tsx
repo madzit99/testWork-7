@@ -35,10 +35,20 @@ const  App = () => {
       return cost;
     } else {
       throw new Error("Ошибка!");
-    }
+    };
   };
 
-
+  const totalCost = () => {
+    const cost = orders.reduce((acc, order) => {
+      const orderInfo = FOOD.find((item) => item.name === order.name);
+      if (orderInfo) {
+        return acc + orderInfo.cost * order.count 
+      } else {
+      throw new Error("Ошибка!");
+      };
+    }, 0);
+    return cost;
+  };
 
   return (
     <div className='container'>
@@ -53,13 +63,16 @@ const  App = () => {
             </span>
               ) : (
                 orders.map((order) => (
-                  <OrderComponent name={order.name} count={order.count} func={() => findCost(order.name, order.count)} onDelete={deleteOrder} />
+                  <OrderComponent name={order.name} count={order.count} func={() => findCost(order.name, order.count)} onDelete={deleteOrder}/>
                 ))
+              )}
+              {orders.length > 0 && (
+                <p className="fs-3 fw-bold">Общая сумма: {totalCost()} СОМ</p>
               )}
            </div>
         </div>
         <div className="col-8 mt-4">
-          <h4>Добавить блюдо</h4>
+          <h4 className="bg-white p-3 rounded-5">Добавить блюдо</h4>
           <div className="row">
             {FOOD.map((food) => (
               <FoodComponent name={food.name} cost={food.cost} img={food.img} onAdd={() => addOrder(food.name)} />

@@ -8,14 +8,14 @@ import borjomiImage from "../src/assets/borjomi.jpeg"
 import coffeeImage from "../src/assets/coffe.jpeg";
 
 const FOOD = [
-  { name: "Burger", cost: 180, img: burgerImage },
-  { name: "Lemonade", cost: 120, img: lemonadeImage },
-  { name: "Doner", cost: 150, img: donerImage },
-  { name: "Tea", cost: 70, img: teaImage },
-  { name: "Sendfich", cost: 90, img: sendfichImage },
-  { name: "Fries", cost: 60, img: friesImage },
-  { name: "Borjomi", cost: 60, img: borjomiImage },
-  { name: "Coffee", cost: 100, img: coffeeImage },
+  { name: "Бургер", cost: 180, img: burgerImage },
+  { name: "Лимонад", cost: 120, img: lemonadeImage },
+  { name: "Донер", cost: 150, img: donerImage },
+  { name: "Чай", cost: 70, img: teaImage },
+  { name: "Сендвич", cost: 90, img: sendfichImage },
+  { name: "Фри", cost: 60, img: friesImage },
+  { name: "Боржоми", cost: 60, img: borjomiImage },
+  { name: "Кофе", cost: 100, img: coffeeImage },
 ];
 
 export default FOOD;

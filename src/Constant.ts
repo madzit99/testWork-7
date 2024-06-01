@@ -1,11 +1,11 @@
-import burgerImage from "../assets/burger.jpeg";
-import lemonadeImage from "../assets/lemonade.png";
-import donerImage from "../assets/doner.jpeg";
-import teaImage from "../assets/tea.jpeg";
-import sendfichImage  from "../assets/sendfich.png";
-import friesImage from "../assets/fries.jpeg";
-import borjomiImage from "../assets/borjomi.jpeg";
-import coffeeImage from "../assets/coffee.jpeg";
+import burgerImage from "../src/assets/burger.jpeg";
+import lemonadeImage from "../src/assets/lemonade.png";
+import donerImage from "../src/assets/doner.jpeg";
+import teaImage from "../src/assets/tea.jpeg";
+import sendfichImage  from "../src/assets/sendfich.png";
+import friesImage from "../src/assets/fries.jpeg";
+import borjomiImage from "../src/assets/borjomi.jpeg"
+import coffeeImage from "../src/assets/coffe.jpeg";
 
 const FOOD = [
   { name: "Burger", cost: 180, img: burgerImage },

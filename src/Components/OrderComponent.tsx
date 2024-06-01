@@ -1,7 +1,7 @@
 import React from "react";
 import { OrderContentProps } from "../types";
 
-const OrderContents:React.FC<OrderContentProps> = ({name, count, func, onDelete}) => {
+const OrderComponent:React.FC<OrderContentProps> = ({name, count, func, onDelete}) => {
     return (
         <div key={name} className="d-flex">
             <h3 className="m-0">{name}</h3>
@@ -13,5 +13,5 @@ const OrderContents:React.FC<OrderContentProps> = ({name, count, func, onDelete}
     );
 };
 
-export default OrderContents;
+export default OrderComponent;
 
